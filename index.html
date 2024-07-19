@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1> Online Exam</h1>
+
+        <!-- Information Page -->
+        <div id="info-container">
+            <h2>Please provide your information to start the exam:</h2>
+            <form id="info-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <button type="button" id="start-exam">Start Exam</button>
+            </form>
+        </div>
+
+        <!-- Exam Container (hidden initially) -->
+        <div id="exam-container" style="display: none;">
+            <div id="question-container">
+                <p id="question"></p>
+                <div id="options"></div>
+            </div>
+            <div id="timer">Time left: <span id="time">20</span> seconds</div>
+            <button id="next-question">Next Question</button>
+            <button id="submit-exam" style="display: none;">Submit</button>
+        </div>
+
+        <!-- Score Container (hidden initially) -->
+        <div id="score-container" style="display: none;">
+            <h2>Thank You!</h2>
+            <p><b>Name:</b> <span id="studentName"></span></p>
+            <p><b>Your score:</b> <span id="score"></span></p>
+            
+        </div>
+    </div>
+</body>
+</html>
